@@ -67,9 +67,10 @@ def search(domain, limit):
     return search.get_emails()
 
 
+#class plugin
 class Plugin:
     def __init__(self, app, conf):
         global app_emailharvester, config
         config = conf
-        app.register_plugin('ask', {'search': search})
+        app.register_plugin('ask', {'search' : search})
         app_emailharvester = app
