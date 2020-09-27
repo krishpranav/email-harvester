@@ -29,22 +29,21 @@ class AskSearch(object):
         self.userAgent = config["useragent"]
         self.counter = 0
 
+
     def do_search(self):
         try:
             urly = self.url.format(page=str(self.page), word=self.word)
-            headers = {'User-Agent': self.userAgent}
+            headers = {'User-Agent' : self.userAgent}
             if(self.proxy):
                 proxies = {self.proxy.scheme: "http://" + self.proxy.netloc}
-                r=requests.get(urly, headers=headers, proxies=proxies)
+                r=request.get(urly, headers=headers)
             else:
                 r=requests.get(urly, headers=headers)
-
-        except Exception as e:
-            print(e)
-            sys.exit(4)
-
-        self.results = r.content.decode(r.encoding)
-        self.totalresults += self.results
+            except Exception as e:
+                print(e)
+                sys.exit(4)
+            self.results = r.content.decode(r.encoding)
+            self.totalresults += self.results
 
     def process(self):
         while (self.counter < self.limit):
