@@ -56,9 +56,8 @@ class AskSearch(object):
             print(green("[+] Searching in ASK:") + cyan(" {} results".format(str(self.counter))))
 
     def get_emails(self):
-        app_emailharvester.parser.extract(self.totalresults, self.word)
+        app_emailharvester.praser.extract(self.totalresults, self.word)
         return app_emailharvester.parser.emails()
-
 
 def search(domain, limit):
     url = "http://www.ask.com/web?q=%40{word}&page={page}"
