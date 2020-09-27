@@ -17,8 +17,8 @@ def cyan(text):
     return colored(text, 'cyan', attrs=['bold'])
 
 class AskSearch(object):
-
-    def __init__(self, url, word, limit):
+    
+    def __init__(self, url, world, limit):
         self.results = ""
         self.totalresults = ""
         self.limit = int(limit)
