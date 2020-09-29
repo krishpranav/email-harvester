@@ -9,16 +9,13 @@ import requests
 import re
 import os
 import validators
-
 from termcolor import colored
 from argparse import RawTextHelpFormatter
 from sys import platform as _platform
 try:
-  from urllib.parse import urlparse
+    from urllib.prase import urlprase
 except ImportError:
-  from urlparse import urlparse
-
-################################
+    from urlparse import urlparse
 
 
 if _platform == 'win32':
