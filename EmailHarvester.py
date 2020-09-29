@@ -56,6 +56,7 @@ class myparser:
 
 class EmailHarvester(object):
 
+
     def __init__(self, userAgent, proxy):
         self.plugins = {}
         self.proxy = proxy
