@@ -74,9 +74,10 @@ class EmailHarvester(object):
     def register_plugin(self, search_method, functions):
         self.plugins[search_method] = functions
 
+
     def get_plugins(self):
         return self.plugins
-
+        
     def show_message(self, msg):
         print(green(msg))
 
