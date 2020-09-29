@@ -275,4 +275,4 @@ if __name__ == '__main__':
                 out_file.write('</EmailHarvester>')
             print(green("[+] Files saved"))
         except Exception as er:
-            print(red("[-] Error saving XML file: " + er))
+            print(red("[-] Error Saving XML File: " + er))
