@@ -73,9 +73,9 @@ class EmailHarvester(object):
                 mod = __import__(fname, fromlist=[''])
                 plugins[fname] = mod.Plugin(self, {'useragent':userAgent, 'proxy':proxy})
 
+
     def register_plugin(self, search_method, functions):
         self.plugins[search_method] = functions
-
 
     def get_plugins(self):
         return self.plugins
