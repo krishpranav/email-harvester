@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+#email harvester
 __version__ = '1'
 
 import argparse
@@ -77,7 +77,7 @@ class EmailHarvester(object):
 
     def get_plugins(self):
         return self.plugins
-        
+
     def show_message(self, msg):
         print(green(msg))
 
