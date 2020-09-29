@@ -49,6 +49,7 @@ class myparser:
         emails = self.unique()
         return emails
 
+
     def unique(self):
         self.new = list(set(self.temp))
         return self.new
