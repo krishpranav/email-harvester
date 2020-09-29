@@ -53,8 +53,6 @@ class myparser:
         self.new = list(set(self.temp))
         return self.new
 
-###################################################################
-
 class EmailHarvester(object):
 
     def __init__(self, userAgent, proxy):
