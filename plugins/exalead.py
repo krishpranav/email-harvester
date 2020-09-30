@@ -9,3 +9,8 @@ def search(domain, limit):
     return app_emailharvester.get_emails()
 
 
+class Plugin:
+    def __init__(self, app, conf):
+        global app_emailharvester, config
+        app.register_plugin('exalead', {'search': search})
+        app_emailharvester = app
