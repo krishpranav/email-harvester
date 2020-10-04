@@ -5,7 +5,7 @@ app_emailharvester = None
 
 def search(domain, limit):
     all_emails = []
-    app_emailharvester.show_message("[+] Searching in Github")
+    app_emailharvester.show_message("[+] Searching In Github....")
 
     yahooUrl = "http://search.yahoo.com/search?p=site%3Agithub.com+%40{word}&n=100&ei=UTF-8&va_vt=any&vo_vt=any&ve_vt=any&vp_vt=any&vd=all&vst=0&vf=all&vm=p&fl=0&fr=yfp-t-152&xargs=0&pstart=1&b={counter}"
     app_emailharvester.init_search(yahooUrl, domain, limit, 1, 100, 'Yahoo + Github')
@@ -32,7 +32,6 @@ def search(domain, limit):
     app_emailharvester.process()
     all_emails += app_emailharvester.get_emails()
 
-    #dogpile seems to not support site:
     
     return all_emails
 
