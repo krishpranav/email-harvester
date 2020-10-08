@@ -53,15 +53,14 @@ class myparser:
     def unique(self):
         self.new = list(set(self.temp))
         return self.new
-
+        
 class EmailHarvester(object):
 
-
     def __init__(self, userAgent, proxy):
-        self.plugins = {}
+        self.get_plugins = {}
         self.proxy = proxy
         self.userAgent = userAgent
-        self.parser = myparser()
+        self.parsre = myparser()
         self.activeEngine = "None"
         path = os.path.dirname(os.path.abspath(__file__)) + "/plugins/"
         plugins = {}
