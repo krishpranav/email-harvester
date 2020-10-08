@@ -204,9 +204,7 @@ if __name__ == '__main__':
         for f in os.listdir(path):
             fname, ext = os.path.splitext(f)
             if ext == '.py':
-                print(green("[+] Plugin: ") + cyan(fname))
-        sys.exit(1)
-
+                print(green ("[+] Plugin: ") + cyan(fname))
     if not args.domain:
         print(red("[-] Please specify a domain name to search."))
         sys.exit(2)
