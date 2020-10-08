@@ -53,7 +53,7 @@ class myparser:
     def unique(self):
         self.new = list(set(self.temp))
         return self.new
-        
+
 class EmailHarvester(object):
 
     def __init__(self, userAgent, proxy):
@@ -138,7 +138,7 @@ def cyan(text):
     return colored(text, 'cyan', attrs=['bold'])
 
 def unique(data):
-        return list(set(data))
+    return list(set(data))
 
 ###################################################################
 
