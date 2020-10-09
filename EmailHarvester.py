@@ -214,7 +214,6 @@ if __name__ == '__main__':
                  "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1")
 
     print(green("[+] User-Agent in use: ") + cyan(userAgent))
-
     if args.proxy:
         print(green("[+] Proxy server in use: ") + cyan(args.proxy.scheme + "://" + args.proxy.netloc))
 
