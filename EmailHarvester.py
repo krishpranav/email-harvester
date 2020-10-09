@@ -81,7 +81,7 @@ class EmailHarvester(object):
 
     def show_message(self, msg):
         print(green(msg))
-        
+
     def init_search(self, url, word, limit, counterInit, counterStep, engineName):
         self.result = ""
         self.totalresults = ""
@@ -106,9 +106,8 @@ class EmailHarvester(object):
         except Exception as e:
             print(e)
             sys.exit(4)
-
         if r.encoding is None:
-	          r.encoding = 'UTF-8'
+            r.encoding = 'UTF-8'
 
         self.results = r.content.decode(r.encoding)
         self.totalresults += self.results
