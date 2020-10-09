@@ -83,7 +83,7 @@ class EmailHarvester(object):
         print(green(msg))
 
     def init_search(self, url, word, limit, counterInit, counterStep, engineName):
-        self.results = ""
+        self.result = ""
         self.totalresults = ""
         self.limit = int(limit)
         self.counter = int(counterInit)
@@ -91,6 +91,7 @@ class EmailHarvester(object):
         self.step = int(counterStep)
         self.word = word
         self.activeEngine = engineName
+        
 
     def do_search(self):
         try:
