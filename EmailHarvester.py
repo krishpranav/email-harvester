@@ -81,7 +81,7 @@ class EmailHarvester(object):
 
     def show_message(self, msg):
         print(green(msg))
-
+        
     def init_search(self, url, word, limit, counterInit, counterStep, engineName):
         self.result = ""
         self.totalresults = ""
