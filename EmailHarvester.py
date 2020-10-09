@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 #email harvester
+#tool author: krishpranav
+#github.com/krishpranav
 __version__ = '1'
 
 import argparse
