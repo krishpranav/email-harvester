@@ -37,8 +37,7 @@ def search(domain, limit):
 
 
 class Plugin:
-	def __init__(self, app, conf):
-		global app_emailharvester, config
-		app.register_plugin('github', {'search': search})
-		app_emailharvester = app
-        
+    def __init__(self, app, conf):
+        global app_emailharvester, config
+        app.register_plugin('github', {'search': search})
+        app_emailharvester = app
