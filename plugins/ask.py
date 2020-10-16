@@ -72,5 +72,4 @@ class Plugin:
         config = conf
         app.register_plugin('ask', {'search': search})
         app_emailharvester = app
-
         
