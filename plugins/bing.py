@@ -2,7 +2,6 @@
 #bing.py
 app_emailharvester = None
 
-
 def search(domain, limit):
     url = "http://www.bing.com/search?q=%40{word}&count=50&first={counter}"
     app_emailharvester.init_search(url, domain, limit, 0, 50, 'Bing')
