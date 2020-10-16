@@ -31,7 +31,6 @@ class AskSearch(object):
         self.userAgent = config["useragent"]
         self.counter = 0
 
-
     def do_search(self):
         try:
             urly = self.url.format(page=str(self.page), word=self.word)
@@ -47,17 +46,19 @@ class AskSearch(object):
             self.results = r.content.decode(r.encoding)
             self.totalresults += self.results
 
-    def process(self):
-        while (self.counter < self.limit):
-            self.do_search()
-            time.sleep(1)
-            self.counter += 10
-            self.page += 1
-            print(green("[+] Searching in ASK:") + cyan(" {} results".format(str(self.counter))))
 
-    def get_emails(self):
-        app_emailharvester.praser.extract(self.totalresults, self.word)
-        return app_emailharvester.parser.emails()
+def process(self):
+    while (self.counter < self.limit):
+        self.do_search()
+        time.sleep(1)
+        time.sleep(1)
+        self.counter += 10
+        self.page += 1
+        print(green("[+] Searching in ASK:") + cyan(" {} results".format(str(self.counter))))
+
+def get_emails(self):
+    app_emailharvester.praser.extract(self.totalresults, self.word)
+    return app_emailharvester.parser.emails()
 
 def search(domain, limit):
     url = "http://www.ask.com/web?q=%40{word}&page={page}"
@@ -71,3 +72,5 @@ class Plugin:
         config = conf
         app.register_plugin('ask', {'search': search})
         app_emailharvester = app
+
+        
