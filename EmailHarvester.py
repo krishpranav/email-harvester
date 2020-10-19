@@ -46,11 +46,10 @@ class myparser:
             '[a-zA-Z0-9.\-_+#~!$&\',;=:]+' +
             '@' +
             '[a-zA-Z0-9.-]*' +
-            self.word)
+             self.word)
         self.temp = reg_emails.findall(self.results)
         emails = self.unique()
         return emails
-
 
     def unique(self):
         self.new = list(set(self.temp))
