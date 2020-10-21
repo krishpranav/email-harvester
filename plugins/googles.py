@@ -12,3 +12,4 @@ class Plugin:
         global app_emailharvester, config
         app.register_plugin('googles', {'search': search})
         app_emailharvester = app
+
