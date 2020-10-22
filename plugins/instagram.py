@@ -35,4 +35,17 @@ def search(domain, limit):
 
 class Plugin:
 	def __init__(self, app, conf):
+		global app_emailharvester, config
 		
+
+
+
+
+
+
+
+
+
+
+
+
