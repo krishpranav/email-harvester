@@ -30,3 +30,9 @@ def search(domain, limit):
     app_emailharvester.init_search(url, domain, limit, 0, 50, 'Exalead + Instagram')
     app_emailharvester.process()
     all_emails += app_emailharvester.get_emails()
+
+    return all_emails
+
+class Plugin:
+	def __init__(self, app, conf):
+		
