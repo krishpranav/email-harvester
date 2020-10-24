@@ -33,3 +33,5 @@ def search(domain, limit):
 
     return all_emails
 
+class Plugin:
+	def __init__(self, app, conf):
