@@ -61,7 +61,7 @@ class EmailHarvester(object):
         self.get_plugins = {}
         self.proxy = proxy
         self.userAgent = userAgent
-        self.parsre = myparser()
+        self.parse = myparser()
         self.activeEngine = "None"
         path = os.path.dirname(os.path.abspath(__file__)) + "/plugins/"
         plugins = {}
@@ -71,7 +71,7 @@ class EmailHarvester(object):
             fname, ext = os.path.splitext(f)
             if ext == '.py':
                 mod = __import__(fname, fromlist=[''])
-                plugins[fname] = mod.Plugin(self, {'useragent':userAgent, 'proxy':proxy})
+                plugins[fname] = mod.Plugin(self, {'userAgent':userAgent, 'proxy':proxy})
 
     def register_plugin(self, search_method, functions):
         self.plugins[search_method] = functions
