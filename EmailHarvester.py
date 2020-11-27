@@ -93,7 +93,7 @@ class EmailHarvester(object):
         self.activeEngine = engineName
 
 
-        
+
 
     def do_search(self):
         try:
@@ -144,7 +144,7 @@ def unique(data):
 
 ###################################################################
 
-def checkProxyUrl(url): 
+def checkProxyUrl(url):
     url_checked = urlparse(url)
     if (url_checked.scheme not in ('http', 'https')) | (url_checked.netloc == ''):
         raise argparse.ArgumentTypeError('Invalid {} Proxy URL (example: http://127.0.0.1:8080).'.format(url))
