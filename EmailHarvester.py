@@ -120,12 +120,10 @@ class EmailHarvester(object):
             time.sleep(1)
             self.counter += self.step
             print(green("[+] Searching in {}:".format(self.activeEngine)) + cyan(" {} results".format(str(self.counter))))
-
+    
     def get_emails(self):
         self.parser.extract(self.totalresults, self.word)
         return self.parser.emails()
-
-###################################################################
 
 def yellow(text):
     return colored(text, 'yellow', attrs=['bold'])
