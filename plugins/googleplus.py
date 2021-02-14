@@ -9,6 +9,6 @@ def search(domain, limit):
 
 class Plugin:
 	def __init__(self, app, conf):
-		global app_emailharvester, config
+		global app_emailharvester, configz
 		app.register_plugin('googleplus', {'search': search})
 		app_emailharvester = app
